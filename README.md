@@ -67,8 +67,6 @@ Nexar est un framework PHP moderne et léger conçu pour créer des applications
 ## Utilisation
 
 
-## Commandes
-
 Nexar inclut pour le moment plusieurs commandes CLI pour faciliter le développement :
 
 - **Créer un nouveau projet**
