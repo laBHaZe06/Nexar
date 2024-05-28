@@ -106,6 +106,7 @@ Nexar inclut pour le moment plusieurs commandes CLI pour faciliter le développe
 
 Voici un aperçu de la structure du répertoire Nexar :
 
+```sh
 Nexar/
 ├── bin/
 │ └── nexar
@@ -131,7 +132,7 @@ Nexar/
 ├── docker-compose.yml
 ├── Dockerfile
 └── install.sh
-
+```
 
 ## Contribution
 
