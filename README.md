@@ -66,9 +66,15 @@ Nexar est un framework PHP moderne et léger conçu pour créer des applications
 
 ## Utilisation
 
-### Démarrer le serveur
+### Création d'un projet Nexar
 
-Si vous utilisez Docker, le serveur devrait déjà être en cours d'exécution. Sinon, vous pouvez démarrer le serveur de développement PHP avec la commande suivante :
+Si vous utilisez Docker, le serveur devrait déjà être en cours d'exécution.La création d'un projet (Api,Module, Web ou E-commerce)
 
 ```sh
-php -S localhost:8000 -t public
+
+bin/nexar create:project the_name_project
+```
+### Démarrer le serveur
+
+```sh
+bin/nexar server
