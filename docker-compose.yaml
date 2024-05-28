@@ -1,0 +1,92 @@
+version: '3.9'
+services:
+
+  db_mysql:
+    image: mysql:5.7
+    restart: always
+    container_name: db_mysql
+    environment:
+      MYSQL_DATABASE: 'Nexar'
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_USER: 'nexar'
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - nexar
+
+  # db_mongodb:
+  #   image: mongo:latest
+  #   restart: always
+  #   container_name: db_mongodb
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: root
+  #     MONGO_INITDB_DATABASE: Nexar
+  #   volumes:
+  #     - ./mongodb:/data/db
+  #   ports:
+  #    - "27017:27017"
+  #   networks:
+  #     - nexar
+
+    
+  nexar:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: nexar
+    volumes:
+        - ./docker/Vhosts:/etc/apache2/sites-enabled
+        - ./:/var/www/
+    ports:
+      - "8741:80"
+    networks:
+      - nexar
+    depends_on:
+      - db_mysql
+      - phpmyadmin
+      - redis
+  
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db_mysql
+      PMA_PORT: 3306
+    ports:
+      - "8081:80"
+    depends_on:
+      - db_mysql
+    networks:
+      - nexar
+
+
+  redis:
+    image: redis:alpine
+    container_name: redis_nexar
+    ports:
+      - "6380:6379"
+    networks:
+      - nexar
+    volumes:
+      - ./redis:/data
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    restart: always
+
+  
+  
+
+  
+networks:
+  nexar:
+    driver: bridge
+  
+volumes:
+  mysql:
+  redis:
+
+  
+    
