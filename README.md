@@ -87,19 +87,19 @@ Nexar inclut pour le moment plusieurs commandes CLI pour faciliter le développe
 - **Créer un nouveau projet**
 
     ```sh
-    nexar create:project <nom-du-projet>
+    bin/nexar create:project <nom-du-projet>
     ```
 
 - **Démarrer le serveur Nexar**
 
     ```sh
-    nexar server:start
+    bin/nexar server:start
     ```
 
 - **Effacer le cache**
 
     ```sh
-    nexar cache:clear
+    bin/nexar cache:clear
     ```
 
 ## Structure du Projet
