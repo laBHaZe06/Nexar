@@ -5,6 +5,7 @@
 
 Nexar est un framework PHP moderne et léger conçu pour créer des applications web rapides et robustes. Il offre une structure intuitive et des fonctionnalités avancées pour développer des projets web avec facilité.
 
+
 ## Table des matières
 
 - [Fonctionnalités](#fonctionnalités)
@@ -123,8 +124,8 @@ Nexar/
 ```
 
 ## Contribution
-
-Les contributions sont les bienvenues ! Si vous souhaitez contribuer à Nexar, veuillez suivre ces étapes :
+Le projet étant toujours en cour,
+les contributions sont les bienvenues ! Si vous souhaitez contribuer à Nexar, veuillez suivre ces étapes :
 
 1. Forkez le projet
 2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`)
