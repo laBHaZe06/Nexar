@@ -78,3 +78,70 @@ bin/nexar create:project the_name_project
 
 ```sh
 bin/nexar server
+```
+
+## Commandes
+
+Nexar inclut pour le moment plusieurs commandes CLI pour faciliter le développement :
+
+- **Créer un nouveau projet**
+
+    ```sh
+    nexar create:project <nom-du-projet>
+    ```
+
+- **Démarrer le serveur Nexar**
+
+    ```sh
+    nexar server:start
+    ```
+
+- **Effacer le cache**
+
+    ```sh
+    nexar cache:clear
+    ```
+
+## Structure du Projet
+
+Voici un aperçu de la structure du répertoire Nexar :
+
+Nexar/
+├── bin/
+│ └── nexar
+├── public/
+│ └── index.php
+├── src/
+│ ├── Command/
+│ │ ├── CreateProjectCommand.php
+│ │ └── StartServerCommand.php
+│ ├── Controller/
+│ │ └── DefaultController.php
+│ ├── Core/
+│ │ ├── Router/
+│ │ │ ├── Route.php
+│ │ │ └── Router.php
+│ │ └── Middleware/
+│ │ └── MiddlewareInterface.php
+│ └── ...
+├── tests/
+├── vendor/
+├── .env
+├── composer.json
+├── docker-compose.yml
+├── Dockerfile
+└── install.sh
+
+
+## Contribution
+
+Les contributions sont les bienvenues ! Si vous souhaitez contribuer à Nexar, veuillez suivre ces étapes :
+
+1. Forkez le projet
+2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`)
+3. Commitez vos modifications (`git commit -m 'Add some AmazingFeature'`)
+4. Poussez votre branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
+
+Pour toute demande de contribution, veuillez me contacter afin de participer au projet.
+
