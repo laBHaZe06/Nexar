@@ -1,7 +1,7 @@
 
 # Nexar
 
-![Nexar Logo](assets/images/nexar.png)
+![Nexar Logo](Nexar/assets/images/nexar.png)
 
 Nexar est un framework PHP moderne et léger conçu pour créer des applications web rapides et robustes. Il offre une structure intuitive et des fonctionnalités avancées pour développer des projets web avec facilité.
 
